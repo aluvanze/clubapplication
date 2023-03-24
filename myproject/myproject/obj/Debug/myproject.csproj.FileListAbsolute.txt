@@ -1,0 +1,11 @@
+C:\Users\jakea\source\repos\myproject\myproject\bin\Debug\myproject.exe
+C:\Users\jakea\source\repos\myproject\myproject\bin\Debug\myproject.pdb
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.csproj.AssemblyReference.cache
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.Form1.resources
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.Properties.Resources.resources
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.csproj.GenerateResource.cache
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.csproj.CoreCompileInputs.cache
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.exe
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.pdb
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.splash.resources
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.Form3.resources
