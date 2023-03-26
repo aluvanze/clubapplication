@@ -12,7 +12,7 @@ namespace myproject
     public partial class Form3 : Form
     {
 
-        static OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Datasource= subzero.accdb");
+        static OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data source= subzero.accdb");
         static OleDbCommand cmd = con.CreateCommand();
         static OleDbDataReader reader;
         public Form3()
