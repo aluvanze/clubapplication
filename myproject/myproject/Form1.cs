@@ -21,5 +21,12 @@ namespace myproject
         {
             this.Close();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form = new Form3();
+            form.Show();
+            this.Close();
+        }
     }
 }

@@ -34,6 +34,7 @@ namespace myproject
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblerror = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUser
@@ -47,6 +48,7 @@ namespace myproject
             // 
             this.txtPass.Location = new System.Drawing.Point(320, 118);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(161, 20);
             this.txtPass.TabIndex = 1;
             // 
@@ -76,11 +78,19 @@ namespace myproject
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblerror
+            // 
+            this.lblerror.Location = new System.Drawing.Point(331, 31);
+            this.lblerror.Name = "lblerror";
+            this.lblerror.Size = new System.Drawing.Size(128, 23);
+            this.lblerror.TabIndex = 5;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblerror);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUser);
@@ -100,5 +110,6 @@ namespace myproject
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblerror;
     }
 }

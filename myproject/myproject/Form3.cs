@@ -12,7 +12,7 @@ namespace myproject
     public partial class Form3 : Form
     {
 
-        static OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data source= subzero.accdb");
+        static OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data source= subzero.accdb");
         static OleDbCommand cmd = con.CreateCommand();
         static OleDbDataReader reader;
         public Form3()
@@ -30,12 +30,17 @@ namespace myproject
             {
                 reader.Read();
                 string user = reader.GetString(0);
-                string pass = reader.GetValue(1).ToString();
+                string pass = reader.GetString(1);
                 if(txtUser.Text==user & txtPass.Text == pass)
                 {
                     Form1 form = new Form1();
                     form.Show();
                     this.Close();
+                }
+                else
+                {
+                    lblerror.Text = "Invalid login details";
+                    con.Close();
                 }
 
             }
