@@ -22,28 +22,43 @@ namespace myproject
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+
+
             con.Open();
-            cmd.CommandText = "select* from users";
+            cmd.CommandText = "SELECT * FROM users";
             cmd.Connection = con;
             reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            string userList = "";
+
+            bool foundUser = false;
+
+            while (reader.Read())
             {
-                reader.Read();
                 string user = reader.GetString(0);
                 string pass = reader.GetString(1);
-                if(txtUser.Text==user & txtPass.Text == pass)
-                {
-                    Form1 form = new Form1();
-                    form.Show();
-                    this.Close();
-                }
-                else
-                {
-                    lblerror.Text = "Invalid login details";
-                    con.Close();
-                }
+                userList += "Username: " + user + ", Password: " + pass + "\n";
 
+                if (txtUser.Text == user && txtPass.Text == pass)
+                {
+                    foundUser = true;
+                    break;
+                }
             }
+
+            if (foundUser)
+            {
+                Form1 form = new Form1();
+                form.Show();
+                this.Close();
+            }
+            else
+            {
+                lblerror.Text = "Invalid login details";
+            }
+
+            con.Close();
+
 
         }
     }

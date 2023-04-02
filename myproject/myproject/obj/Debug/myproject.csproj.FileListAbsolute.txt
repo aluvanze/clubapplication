@@ -9,3 +9,4 @@ C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.exe
 C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.pdb
 C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.splash.resources
 C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.Form3.resources
+C:\Users\jakea\source\repos\myproject\myproject\obj\Debug\myproject.calender.resources
