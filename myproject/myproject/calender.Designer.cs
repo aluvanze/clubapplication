@@ -46,9 +46,10 @@ namespace myproject
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calenderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registeredUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,7 +159,8 @@ namespace myproject
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logoutToolStripMenuItem,
-            this.closeToolStripMenuItem});
+            this.closeToolStripMenuItem,
+            this.dashboardToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -192,16 +194,6 @@ namespace myproject
             this.eventsToolStripMenuItem.Text = "Events";
             this.eventsToolStripMenuItem.Click += new System.EventHandler(this.eventsToolStripMenuItem_Click);
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(46, 376);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(170, 50);
-            this.btnRefresh.TabIndex = 13;
-            this.btnRefresh.Text = "Refresh List";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -213,9 +205,26 @@ namespace myproject
             // registeredUsersToolStripMenuItem
             // 
             this.registeredUsersToolStripMenuItem.Name = "registeredUsersToolStripMenuItem";
-            this.registeredUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registeredUsersToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.registeredUsersToolStripMenuItem.Text = "Registered Users";
             this.registeredUsersToolStripMenuItem.Click += new System.EventHandler(this.registeredUsersToolStripMenuItem_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(46, 376);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(170, 50);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "Refresh List";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // calender
             // 
@@ -269,5 +278,6 @@ namespace myproject
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registeredUsersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
     }
 }

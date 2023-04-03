@@ -62,8 +62,8 @@ namespace myproject
 
         private void eventsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-         
+            MessageBox.Show("You are on the Events Page!");
+
         }
 
         private void calender_Load(object sender, EventArgs e)
@@ -142,6 +142,14 @@ namespace myproject
             Form1 form = new Form1();
             form.Show();
             this.Close();
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dashbhoard form = new dashbhoard();
+            form.Show();
+            this.Close();
+
         }
     }
 }

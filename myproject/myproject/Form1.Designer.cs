@@ -31,6 +31,13 @@ namespace myproject
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calenderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registeredUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.lblUsers = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -44,13 +51,7 @@ namespace myproject
             this.btnAdd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calenderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registeredUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +67,60 @@ namespace myproject
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem,
+            this.logoutToolStripMenuItem,
+            this.dashboardToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Text = "Logout";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Text = "Close";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // calenderToolStripMenuItem
+            // 
+            this.calenderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eventsToolStripMenuItem});
+            this.calenderToolStripMenuItem.Name = "calenderToolStripMenuItem";
+            this.calenderToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.calenderToolStripMenuItem.Text = "Calender";
+            // 
+            // eventsToolStripMenuItem
+            // 
+            this.eventsToolStripMenuItem.Name = "eventsToolStripMenuItem";
+            this.eventsToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.eventsToolStripMenuItem.Text = "Events";
+            this.eventsToolStripMenuItem.Click += new System.EventHandler(this.eventsToolStripMenuItem_Click);
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registeredUsersToolStripMenuItem});
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.usersToolStripMenuItem.Text = "Users";
+            // 
+            // registeredUsersToolStripMenuItem
+            // 
+            this.registeredUsersToolStripMenuItem.Name = "registeredUsersToolStripMenuItem";
+            this.registeredUsersToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.registeredUsersToolStripMenuItem.Text = "Registered Users";
+            this.registeredUsersToolStripMenuItem.Click += new System.EventHandler(this.registeredUsersToolStripMenuItem_Click);
             // 
             // fileSystemWatcher1
             // 
@@ -172,58 +227,12 @@ namespace myproject
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // closeToolStripMenuItem
+            // dashboardToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.closeToolStripMenuItem.Text = "Logout";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logoutToolStripMenuItem.Text = "Close";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // calenderToolStripMenuItem
-            // 
-            this.calenderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eventsToolStripMenuItem});
-            this.calenderToolStripMenuItem.Name = "calenderToolStripMenuItem";
-            this.calenderToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.calenderToolStripMenuItem.Text = "Calender";
-            // 
-            // eventsToolStripMenuItem
-            // 
-            this.eventsToolStripMenuItem.Name = "eventsToolStripMenuItem";
-            this.eventsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eventsToolStripMenuItem.Text = "Events";
-            this.eventsToolStripMenuItem.Click += new System.EventHandler(this.eventsToolStripMenuItem_Click);
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registeredUsersToolStripMenuItem});
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.usersToolStripMenuItem.Text = "Users";
-            // 
-            // registeredUsersToolStripMenuItem
-            // 
-            this.registeredUsersToolStripMenuItem.Name = "registeredUsersToolStripMenuItem";
-            this.registeredUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registeredUsersToolStripMenuItem.Text = "Registered Users";
-            this.registeredUsersToolStripMenuItem.Click += new System.EventHandler(this.registeredUsersToolStripMenuItem_Click);
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -279,6 +288,7 @@ namespace myproject
         private System.Windows.Forms.ToolStripMenuItem eventsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registeredUsersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
     }
 }
 

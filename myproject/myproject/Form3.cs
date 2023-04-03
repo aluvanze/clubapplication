@@ -48,13 +48,15 @@ namespace myproject
 
             if (foundUser)
             {
-                Form1 form = new Form1();
+                dashbhoard form = new dashbhoard();
                 form.Show();
                 this.Close();
             }
             else
             {
                 lblerror.Text = "Invalid login details";
+               
+                lblerror.ForeColor = Color.Red;
             }
 
             con.Close();

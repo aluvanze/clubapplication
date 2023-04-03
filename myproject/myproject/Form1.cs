@@ -141,6 +141,15 @@ namespace myproject
 
         private void registeredUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("You are on the User's Page!");
+
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dashbhoard form = new dashbhoard();
+            form.Show();
+            this.Close();
 
         }
     }
